@@ -5,22 +5,30 @@ export class Pacijent {
     this.jmbg = jmbg;
     this.brojKartona = brojKartona;
     this.pregledi = [];
+    this.datumKreiranja = new Date(Date.now()).toLocaleString();
+    console.log(`[${this.datumKreiranja}] Pacijent ${ime} kreiran.`);
   }
 
   biraDoktora(doktor) {
     this.doktor = doktor;
-    // Doktor.dobijaPacijenta(doktor, this.ime);
+    doktor.dobijaPacijenta(this.ime);
+    console.log(
+      `[${new Date(Date.now()).toLocaleString()}] Pacijent ${
+        this.ime
+      } bira doktora ${doktor.ime}.`
+    );
   }
 
-  static dobijaPregled(pacijent, pregled) {
-    pacijent.pregledi.push(pregled);
-  }
-
-  obaviPregled(pregled) {
-    console.log("Pregled obavljen" + preged);
+  dobijaPregled(pregled) {
+    this.pregledi.push(pregled);
   }
 
   obaviSvePreglede() {
-    this.pregledi.forEach(this.obaviPregled());
+    this.pregledi.forEach(pregled => {
+      console.log(
+        `[${pregled.vrijemePregleda.toLocaleString()}]Pregled obavljen: ` +
+          pregled.imePregleda
+      );
+    });
   }
 }

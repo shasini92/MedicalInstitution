@@ -1,11 +1,12 @@
-// import { LaboratorijskiPregled } from "LaboratorijskiPregled";
+import { LaboratorijskiPregled } from "./LaboratorijskiPregled.js";
 
 export class KrvniPritisak extends LaboratorijskiPregled {
-  constructor(datum, vrijeme) {
-    super(datum, vrijeme);
+  constructor(vrijemePregleda) {
+    super(vrijemePregleda);
     this.puls = this.getRandomNumber(60, 100);
     this.gornjiPritisak = this.getRandomNumber(120, 160);
     this.donjiPritisak = this.getRandomNumber(60, 100);
+    this.imePregleda = "Mjerenje krvnog pritiska.";
   }
 
   getRandomNumber(min, max) {

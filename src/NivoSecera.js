@@ -1,12 +1,12 @@
-// import { LaboratorijskiPregled } from "LaboratorijskiPregled";
+import { LaboratorijskiPregled } from "./LaboratorijskiPregled.js";
 
 export class NivoSecera extends LaboratorijskiPregled {
-  constructor(datum, vrijeme) {
-    super(datum, vrijeme);
+  constructor(vrijemePregleda) {
+    super(vrijemePregleda);
     this.vrednost = this.getRandomNumber(60, 140);
-    this.vremeObroka = new Date().setDate(today.getDate() - 1);
+    this.vremeObroka = new Date(vrijemePregleda - 24 * 60 * 60 * 1000);
+    this.imePregleda = "Mjerenje secera u krvi.";
   }
-  today = new Date();
   getRandomNumber(min, max) {
     return Math.random() * (max - min) + min;
   }
