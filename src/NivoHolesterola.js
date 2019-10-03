@@ -1,4 +1,4 @@
-import { LaboratorijskiPregled } from "LaboratorijskiPregled";
+// import { LaboratorijskiPregled } from "./LaboratorijskiPregled.js";
 
 export class NivoHolesterola extends LaboratorijskiPregled {
   constructor(datum, vrijeme) {

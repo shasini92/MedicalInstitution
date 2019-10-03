@@ -1,4 +1,4 @@
-import { LaboratorijskiPregled } from "LaboratorijskiPregled";
+// import { LaboratorijskiPregled } from "LaboratorijskiPregled";
 
 export class NivoSecera extends LaboratorijskiPregled {
   constructor(datum, vrijeme) {

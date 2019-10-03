@@ -1,5 +1,3 @@
-import { Doktor } from "Doktor";
-
 export class Pacijent {
   constructor(ime, prezime, jmbg, brojKartona) {
     this.ime = ime;
@@ -11,7 +9,7 @@ export class Pacijent {
 
   biraDoktora(doktor) {
     this.doktor = doktor;
-    Doktor.dobijaPacijenta(doktor, this.ime);
+    // Doktor.dobijaPacijenta(doktor, this.ime);
   }
 
   static dobijaPregled(pacijent, pregled) {
